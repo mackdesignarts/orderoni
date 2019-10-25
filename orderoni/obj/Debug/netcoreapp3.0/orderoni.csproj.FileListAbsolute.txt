@@ -109,7 +109,14 @@ C:\orderoni\code\orderoni\bin\Debug\netcoreapp3.0\orderoni.runtimeconfig.json
 C:\orderoni\code\orderoni\bin\Debug\netcoreapp3.0\orderoni.runtimeconfig.dev.json
 C:\orderoni\code\orderoni\bin\Debug\netcoreapp3.0\orderoni.dll
 C:\orderoni\code\orderoni\bin\Debug\netcoreapp3.0\orderoni.pdb
-C:\orderoni\code\orderoni\obj\Debug\netcoreapp3.0\orderoni.MvcApplicationPartsAssemblyInfo.cache
 C:\orderoni\code\orderoni\obj\Debug\netcoreapp3.0\orderoni.dll
 C:\orderoni\code\orderoni\obj\Debug\netcoreapp3.0\orderoni.pdb
 C:\orderoni\code\orderoni\obj\Debug\netcoreapp3.0\orderoni.csprojAssemblyReference.cache
+C:\orderoni\code\orderoni\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Logging.dll
+C:\orderoni\code\orderoni\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Tokens.dll
+C:\orderoni\code\orderoni\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\orderoni\code\orderoni\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\orderoni\code\orderoni\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Protocols.dll
+C:\orderoni\code\orderoni\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\orderoni\code\orderoni\bin\Debug\netcoreapp3.0\System.IdentityModel.Tokens.Jwt.dll
+C:\orderoni\code\orderoni\obj\Debug\netcoreapp3.0\orderoni.MvcApplicationPartsAssemblyInfo.cache

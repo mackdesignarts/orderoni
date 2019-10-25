@@ -10,7 +10,7 @@
             <span></span>
             <span></span>
         </div>
-        <div class="container pt-lg-md">
+        <div class="container pt-lg-md col-adjust-up">
             <div class="row justify-content-center">
                 <div class="col-lg-5">
                     <card type="secondary" shadow
@@ -18,64 +18,80 @@
                           body-classes="px-lg-5 py-lg-5"
                           class="border-0">
                         <template>
-                            <div class="text-muted text-center mb-3">
-                                <small>Sign in with</small>
+                            <div class="text-left text-muted mb-4 heading-2">
+                                <span>Sign in or sign up</span>
                             </div>
-                            <div class="btn-wrapper text-center">
-                                <base-button type="neutral">
-                                    <img slot="icon" src="img/icons/common/github.svg">
-                                    Github
-                                </base-button>
-
-                                <base-button type="neutral">
-                                    <img slot="icon" src="img/icons/common/google.svg">
-                                    Google
-                                </base-button>
-                            </div>
-                        </template>
-                        <template>
-                            <div class="text-center text-muted mb-4">
-                                <small>Or sign in with credentials</small>
-                            </div>
-                            <form role="form">
+                            <div class="login-input-wrapper">
                                 <base-input alternative
-                                            class="mb-3"
                                             placeholder="Email"
-                                            addon-left-icon="ni ni-email-83">
+                                            addon-left-icon="email-icon-class"
+                                            v-model="username" 
+                                            name="username"
+                                            >
                                 </base-input>
+                            </div>
+                            <div class="login-input-wrapper">
                                 <base-input alternative
                                             type="password"
                                             placeholder="Password"
-                                            addon-left-icon="ni ni-lock-circle-open">
+                                            addon-left-icon="lock-icon-class"
+                                            v-model="password" 
+                                            name="password"
+                                            >
                                 </base-input>
-                                <base-checkbox>
-                                    Remember me
-                                </base-checkbox>
-                                <div class="text-center">
-                                    <base-button type="primary" class="my-4">Sign In</base-button>
-                                </div>
-                            </form>
+                            </div>
+                            <div class="text-center">
+                                <base-button type="primary" v-on:click="handleSubmit" class="my-4 login-button">SIGN IN</base-button>
+                            </div>
+                            <div class="text-center">
+                                <router-link to="/register" role="button">
+                                    <base-button type="neutral" class="my-4 login-button">CREATE ACCOUNT</base-button>
+                                </router-link>
+                            </div>
+                            <div class="text-center">
+                                <a href="#" class="text-light">
+                                    <small>Forgot password?</small>
+                                </a>
+                            </div>
                         </template>
                     </card>
-                    <div class="row mt-3">
-                        <div class="col-6">
-                            <a href="#" class="text-light">
-                                <small>Forgot password?</small>
-                            </a>
-                        </div>
-                        <div class="col-6 text-right">
-                            <a href="#" class="text-light">
-                                <small>Create new account</small>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 </template>
 <script>
-export default {};
+export default {
+    data () {
+        return {
+            username: '',
+            password: '',
+            submitted: false
+        }
+    },
+    computed: {
+        loggingIn () {
+            return this.$store.state.authentication.status.loggingIn;
+        }
+    },
+    created () {
+        // reset login status
+        this.$store.dispatch('authentication/logout');
+    },
+    methods: {
+        handleSubmit (e) {
+            this.submitted = true;
+            const { username, password } = this;
+            const { dispatch } = this.$store;
+            if (username && password) {
+                dispatch('authentication/login', { username, password });
+            }
+        }
+    }
+};
 </script>
 <style>
+.col-adjust-up {
+    margin-top: -50px;
+}
 </style>

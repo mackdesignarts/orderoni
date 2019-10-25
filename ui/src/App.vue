@@ -15,6 +15,17 @@ import { FadeTransition } from "vue2-transitions";
 export default {
   components: {
     FadeTransition
-  }
+  },
+  computed: {
+    alert () {
+      return this.$store.state.alert
+    }
+  },
+  watch:{
+    $route (to, from){
+      // clear alert on location change
+      this.$store.dispatch('alert/clear');
+    }
+  } 
 };
 </script>
