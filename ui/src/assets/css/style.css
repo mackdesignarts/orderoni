@@ -109,6 +109,7 @@
 
 .nav-item-far-right {
     margin-left: 30px;
+    float: right;
 }
 
 .bg-secondary {
@@ -156,6 +157,13 @@
     background-size: 18px;
 }
 
+.search-icon-class {
+    width: 25px;
+    height: 25px;
+    background: url("../../../public/img/pin_icon.png") center no-repeat;
+    background-size: 18px;
+}
+
 .form-group {
     margin-bottom: 0 !important;
 }
@@ -192,6 +200,11 @@
     font-size: 3.5em;
     border-radius: .03em;
     padding: .2em .25em .1em .25em;
+    cursor: pointer;
+}
+
+.big-red-text-block:hover {
+    background: #e22470;
 }
 
 .white-text {
@@ -205,7 +218,41 @@
     background-size: 350px;
 }
 
-.search-heading{
-    line-height: 1.25em;
+.search-wrapper {
+    margin-top: 3.5em;
+}
+
+.search-heading {
+    line-height: 1.3em;
+}
+
+.search-input-wrapper {
+    background: #fadfec;
+    margin: 10px 0 0 0px;
+}
+.search-input-box {
+    margin: 1.5em 1em;
+}
+
+.search-button {
+    font-size: 1.1em;
+}
+
+.arrow-button {
+    background: url("/img/chevron_button_short.png") no-repeat scroll 0 0 transparent !important;
+    background-size: 172px 50px !important;
+    cursor: pointer;
+    height: 50px !important;
+    border: none !important;
+    text-align: left !important;
+}
+
+.arrow-button:hover {
+    background: url("/img/chevron_button_short_up.png") no-repeat scroll 0 0 transparent !important;
+    background-size: 172px 50px !important;
+    cursor: pointer;
+    height: 50px !important;
+    border: none !important;
+    text-align: left !important;
 }
 

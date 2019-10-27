@@ -7,6 +7,7 @@ import Landing from "./views/Landing.vue";
 import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import Profile from "./views/Profile.vue";
+import Menus from "./views/Menus.vue";
 
 Vue.use(Router);
 
@@ -29,6 +30,15 @@ export const router = new Router({
       components: {
         header: AppHeader,
         default: Landing,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/menus",
+      name: "menus",
+      components: {
+        header: AppHeader,
+        default: Menus,
         footer: AppFooter
       }
     },
@@ -75,7 +85,7 @@ export const router = new Router({
 
 router.beforeEach((to, from, next) => {
   // redirect to login page if not logged in and trying to access a restricted page
-  const publicPages = ['/','/login','/register'];
+  const publicPages = ['/','/login','/register','/menus'];
   const authRequired = !publicPages.includes(to.path);
   const loggedIn = localStorage.getItem('user');
 

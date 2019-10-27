@@ -1,5 +1,5 @@
 <template>
-    <div class="container pt-lg-md">
+    <div class="cta-wrapper">
         <div class="row">
             <div class="cta-illustration"></div>
         </div>
