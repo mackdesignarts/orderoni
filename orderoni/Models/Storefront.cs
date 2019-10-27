@@ -17,7 +17,7 @@ namespace orderoni.Models
         public string BusinessName { get; set; }
 
         [BsonElement("ownerType")]
-        public string OwnerType { get; set; }
+        public int OwnerType { get; set; }
 
         [BsonElement("ownerFIrstName")]
         public string OwnerFirstName { get; set; }
@@ -38,7 +38,7 @@ namespace orderoni.Models
         public string DateEntered { get; set; }
 
         [BsonElement("rating")]
-        public string Rating { get; set; }
+        public int Rating { get; set; }
 
         [BsonElement("images")]
         public BsonArray Images { get; set; }

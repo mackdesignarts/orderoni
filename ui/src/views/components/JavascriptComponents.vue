@@ -65,7 +65,6 @@
             <date-pickers></date-pickers>
             <!-- Tooltips and Popovers -->
             <h3 class="h4 text-success font-weight-bold mt-md mb-4">Tooltips &amp; Popovers</h3>
-            <tooltips></tooltips>
         </div>
     </section>
 </template>
@@ -73,7 +72,6 @@
 import Tabs from "@/components/Tabs/Tabs.vue";
 import TabPane from "@/components/Tabs/TabPane.vue";
 import Modals from "./JavascriptComponents/Modals";
-const Tooltips = () => import("./JavascriptComponents/Tooltips");
 const DatePickers = () => import("./JavascriptComponents/DatePickers");
 import Images from "./JavascriptComponents/Images";
 import TabsSection from "./JavascriptComponents/TabsSection";
@@ -89,8 +87,7 @@ export default {
     Tabs,
     TabsSection,
     ProgressSection,
-    Typography,
-    Tooltips
+    Typography
   }
 };
 </script>

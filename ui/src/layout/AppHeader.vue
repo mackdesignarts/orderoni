@@ -32,7 +32,13 @@
                         <span class="nav-link-inner--text">ADD A KITCHEN</span>
                     </a>
                 </li>
-                <li class="nav-item nav-item-far-right">
+                <li v-if="isLoggedIn" class="nav-item nav-item-far-right">
+                    <a href="" @click="logout" class="nav-link" role="button">
+                        <span class="menu-item-icon2"><img src="img/lock_icon.png" alt="login" /></span>
+                        <span id="itemLogin" class="nav-link-inner--text nav-link-no-border">LOGOUT</span>
+                    </a>
+                </li>
+                <li v-if="!isLoggedIn" class="nav-item nav-item-far-right">
                     <router-link to="/login" class="nav-link" role="button">
                         <span class="menu-item-icon2"><img src="img/lock_icon.png" alt="login" /></span>
                         <span id="itemLogin" class="nav-link-inner--text nav-link-no-border">LOGIN</span>
@@ -48,12 +54,16 @@ import BaseDropdown from "@/components/BaseDropdown";
 import CloseButton from "@/components/CloseButton";
 
 export default {
-  components: {
+    components: {
     BaseNav,
     CloseButton,
     BaseDropdown
-  },
-  computed: {
+    },
+    computed: {
+        isLoggedIn : function(){ 
+            console.log(this.$store.state.authentication.user);
+            return this.$store.state.authentication.user;
+        },
         user () {
             return this.$store.state.authentication.user;
         },
@@ -61,8 +71,13 @@ export default {
             return this.$store.state.users.all;
         }
     },
-    created () {
-        this.$store.dispatch('users/getAll');
+    methods: {
+      logout: function () {
+        this.$store.dispatch('authentication/logout')
+        .then(() => {
+          this.$router.push('/')
+        })
+      }
     }
 };
 </script>

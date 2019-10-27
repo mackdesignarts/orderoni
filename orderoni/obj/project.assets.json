@@ -662,6 +662,19 @@
           "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {}
         }
       },
+      "Microsoft.Json.Schema/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
+          "System.Collections.Immutable": "1.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Json.Schema.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Json.Schema.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/2.1.2": {
         "type": "package",
         "compile": {
@@ -924,13 +937,22 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/12.0.3-beta2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NLog/4.6.7": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NLog.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {}
         }
       },
       "NuGet.Frameworks/4.7.0": {
@@ -3681,6 +3703,54 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
+    "Microsoft.Json.Schema/1.1.1": {
+      "sha512": "pMkyKerV1nlM70VhPqlUaPUN73P7hSdYrB7WucKy21jLbZrfFda710BPxcJ3lGarSnoiha56NmocoYp0wtsVQQ==",
+      "type": "package",
+      "path": "microsoft.json.schema/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Microsoft.Json.Schema.dll",
+        "lib/net461/Microsoft.Json.Schema.pdb",
+        "lib/netstandard2.0/Microsoft.Json.Schema.dll",
+        "lib/netstandard2.0/Microsoft.Json.Schema.pdb",
+        "microsoft.json.schema.1.1.1.nupkg.sha512",
+        "microsoft.json.schema.nuspec",
+        "src/Json.Schema/AdditionalItems.cs",
+        "src/Json.Schema/AdditionalItemsConverter.cs",
+        "src/Json.Schema/AdditionalProperties.cs",
+        "src/Json.Schema/AdditionalPropertiesConverter.cs",
+        "src/Json.Schema/CommonAssemblyInfo.cs",
+        "src/Json.Schema/Dependency.cs",
+        "src/Json.Schema/DependencyConverter.cs",
+        "src/Json.Schema/Error.cs",
+        "src/Json.Schema/ErrorNumber.cs",
+        "src/Json.Schema/ExtensionMethods.cs",
+        "src/Json.Schema/FormatAttributes.cs",
+        "src/Json.Schema/Hash.cs",
+        "src/Json.Schema/Items.cs",
+        "src/Json.Schema/ItemsConverter.cs",
+        "src/Json.Schema/JTokenTypeExtensions.cs",
+        "src/Json.Schema/Json.Schema.csproj",
+        "src/Json.Schema/JsonSchema.cs",
+        "src/Json.Schema/JsonSchemaContractResolver.cs",
+        "src/Json.Schema/JsonSyntaxException.cs",
+        "src/Json.Schema/MustBeStringConverter.cs",
+        "src/Json.Schema/Properties/AssemblyInfo.cs",
+        "src/Json.Schema/RefProperty.cs",
+        "src/Json.Schema/Resources.Designer.cs",
+        "src/Json.Schema/Resources.resx",
+        "src/Json.Schema/SchemaReader.cs",
+        "src/Json.Schema/SchemaType.cs",
+        "src/Json.Schema/SchemaTypeConverter.cs",
+        "src/Json.Schema/SchemaValidationErrorAccumulator.cs",
+        "src/Json.Schema/SchemaValidationException.cs",
+        "src/Json.Schema/SchemaWriter.cs",
+        "src/Json.Schema/UriOrFragment.cs",
+        "src/Json.Schema/UriOrFragmentConverter.cs",
+        "src/Json.Schema/VersionConstants.cs"
+      ]
+    },
     "Microsoft.NETCore.Platforms/2.1.2": {
       "sha512": "mOJy3M0UN+LUG21dLGMxaWZEP6xYpQEpLuvuEQBaownaX4YuhH6NmNUlN9si+vNkAS6dwJ//N1O4DmLf2CikVg==",
       "type": "package",
@@ -4251,10 +4321,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+    "Newtonsoft.Json/12.0.3-beta2": {
+      "sha512": "CNkBl+FKCsp1Tw7MKCpSOCKfZIElxOOBhG46VnFV2G0hRCC1Cc2UUJDknETNGeymXN1/k6hxd44uGVZvdwyEsQ==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "newtonsoft.json/12.0.3-beta2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4277,8 +4347,42 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.12.0.3-beta2.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "NLog/4.6.7": {
+      "sha512": "xSIzXrIF89Ww6yoJPvyBcu4JLgNiDiEaTT4GyVltZEeVIvkgSm9J/srUy1Yz0EXwbTv502l8knoCFrgNc/MUMA==",
+      "type": "package",
+      "path": "nlog/4.6.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid44/NLog.dll",
+        "lib/monoandroid44/NLog.xml",
+        "lib/net35/NLog.dll",
+        "lib/net35/NLog.xml",
+        "lib/net40-client/NLog.dll",
+        "lib/net40-client/NLog.xml",
+        "lib/net45/NLog.dll",
+        "lib/net45/NLog.xml",
+        "lib/netstandard1.3/NLog.dll",
+        "lib/netstandard1.3/NLog.xml",
+        "lib/netstandard1.5/NLog.dll",
+        "lib/netstandard1.5/NLog.xml",
+        "lib/netstandard2.0/NLog.dll",
+        "lib/netstandard2.0/NLog.xml",
+        "lib/sl4/NLog.dll",
+        "lib/sl4/NLog.xml",
+        "lib/sl5/NLog.dll",
+        "lib/sl5/NLog.xml",
+        "lib/wp8/NLog.dll",
+        "lib/wp8/NLog.xml",
+        "lib/xamarinios10/NLog.dll",
+        "lib/xamarinios10/NLog.xml",
+        "nlog.4.6.7.nupkg.sha512",
+        "nlog.nuspec"
       ]
     },
     "NuGet.Frameworks/4.7.0": {
@@ -9199,8 +9303,11 @@
       "Microsoft.EntityFrameworkCore.Tools >= 3.0.0",
       "Microsoft.Extensions.Logging.Debug >= 3.0.0",
       "Microsoft.IdentityModel.Tokens >= 5.6.0",
+      "Microsoft.Json.Schema >= 1.1.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.0.0",
-      "MongoDB.Driver >= 2.9.2"
+      "MongoDB.Driver >= 2.9.2",
+      "NLog >= 4.6.7",
+      "Newtonsoft.Json >= 12.0.3-beta2"
     ]
   },
   "packageFolders": {
@@ -9269,6 +9376,10 @@
             "target": "Package",
             "version": "[5.6.0, )"
           },
+          "Microsoft.Json.Schema": {
+            "target": "Package",
+            "version": "[1.1.1, )"
+          },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[3.0.0, )"
@@ -9276,6 +9387,14 @@
           "MongoDB.Driver": {
             "target": "Package",
             "version": "[2.9.2, )"
+          },
+          "NLog": {
+            "target": "Package",
+            "version": "[4.6.7, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.3-beta2, )"
           }
         },
         "imports": [

@@ -76,6 +76,6 @@ namespace orderoni.Controllers
             _storefrontService.Remove(storefront.Id);
 
             return NoContent();
-        }
+        } 
     }
 }

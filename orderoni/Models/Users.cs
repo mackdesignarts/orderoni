@@ -32,7 +32,7 @@ namespace orderoni.Models
         public string Password { get; set; }
 
         [BsonElement("token")]
-        public string Token { get; set; }
+        public string Token { get; set; } 
 
         [BsonElement("location")]
         public string Location { get; set; }
